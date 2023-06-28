@@ -1,0 +1,44 @@
+#left {
+    position:relative;
+    animation-name: leftmove;
+    animation-duration: 7s;
+    animation-iteration-count:1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-play-state:paused;
+    width:50%;
+    height: 100%;
+    background-color: black;
+    display:inline-block;
+}
+
+#right {
+    position:relative;
+    animation-name: rightmove;
+    animation-duration: 7s;
+    animation-iteration-count:1;
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
+    animation-play-state:paused;
+    width:50%;
+    height: 100%;
+    background-color: rgb(0, 81, 255);
+    display:inline-block;
+}
+
+@-webkit-keyframes leftmove{
+    0% {
+        right: 0px;
+    }
+    100% {
+        right: 1200px;
+    }
+}
+@-webkit-keyframes rightmove{
+    0% {
+        left:0px;
+    }
+    100% {
+        left:1200px;
+    }
+}

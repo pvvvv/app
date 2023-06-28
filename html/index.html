@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/app/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/app/css/animation.css">
+    <title>Document</title>
+</head>
+<script>
+    let cnt = 0;
+    window.onload = () => {
+        document.getElementById('coin').innerHTML = cnt;
+    };
+    function plusCoin(){
+        cnt++;
+        document.getElementById('coin').innerHTML = cnt;
+    }
+    function run(){
+        if(cnt >= 3){
+            document.getElementById('coin').innerHTML = cnt - 3;
+            document.getElementById('left').style.webkitAnimationPlayState="running";
+            document.getElementById('right').style.webkitAnimationPlayState="running";
+        } else {
+            alert('no')
+        }
+    }
+</script>
+<body style="height : 100vh;">
+    <div style="position: absolute; z-index: 999;">
+        <button onclick="run()"></button>
+        <button onclick="plusCoin()"></button>
+        <span style="color: white;" id="coin"></span>
+    </div>
+    <div style="display: flex; height: 100%;">
+        <div id="left"></div>
+        <div id="right"></div>
+    </div>
+</body>
+</html>
